@@ -1,0 +1,6 @@
+Lessons I've Learned:
+- Regular Expressions elements:
+ / = delimeter;
+ \d = digit;
+ () = grouping;
+ 
