@@ -1,6 +1,11 @@
 Lessons I've Learned:
 - Regular Expressions elements:
- / = delimeter;
- \d = digit;
+ / = indicates that beginning and the end of the pattern;
+ \d = matches digits;
  () = grouping;
- 
+ (?=) = this one was a tricky. It pratically helped me find the overlapping strings. The tricky part is that it returns a 2D array and the matches are stored in the second one, different when the lookahead is not used, so the index references were changed from Part 1 to Part 2;
+ | = behaves line an OR operation.
+
+PHP methods:
+ is_numeric = checks if a string is a digit;
+ preg_quote = in combination to the array_map, it helped turn the key values of the number array to literal strings.
