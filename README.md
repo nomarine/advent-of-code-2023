@@ -7,8 +7,4 @@ My choice was **PHP**.
 
 ## List of puzzles
 - [Day 1](./01-Trebuchet)
-  - Part 1 solution
-  - Part 2 solution
-- Day 1
-  - Part 1
-  - Part 2
+- [Day 2](./02-Cube%Conundrum)
