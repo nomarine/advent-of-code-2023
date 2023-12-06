@@ -5,7 +5,7 @@
     $cube_colors = ['red', 'blue', 'green'];
     $result = 0;
     $games = setGames($dataset, $cube_colors);
-    
+
     $cube_limits = setCubeLimits($cube_colors, $games);
     foreach($cube_limits as $game_number=>$game){
         echo 'Game '.$game_number." could have been played with a minimum of:\n";
@@ -14,6 +14,8 @@
         }
         echo "\n";
     }
+    $power = getPower($cube_limits, $cube_colors);
+    echo $power;
 
     function setGames($dataset, $cube_colors){
         foreach($dataset as $line){
@@ -51,12 +53,16 @@
         return $cube_limits;
     }
 
-    function getResult($game_numbers){
-        $result = 0;
-        foreach($game_numbers as $number){
-            $result += $number;
+    function getPower($cube_limits, $cube_colors){
+        $powers = [];
+        foreach($cube_limits as $game_number => $game){
+            $power = 1;
+            foreach($cube_colors as $color){
+                $power *= $game[$color];
+            }
+            $powers[$game_number] = $power;
         }
-        return $result;
+        return array_sum($powers);
     }
     
 ?>
