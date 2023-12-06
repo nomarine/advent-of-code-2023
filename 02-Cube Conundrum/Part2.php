@@ -1,6 +1,6 @@
 <?php
-    /* $document = file_get_contents('games.txt'); */
-    $document = file_get_contents('poc.txt');
+    $document = file_get_contents('games.txt');
+    /* $document = file_get_contents('poc.txt'); */
     $dataset = explode("\n", $document);
     $cube_colors = ['red', 'blue', 'green'];
     $result = 0;
