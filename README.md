@@ -6,7 +6,7 @@ Some programming puzzles for a variety of skill sets and skill levels that can b
 My choice was **PHP**.
 
 ## List of puzzles
-- [Day 1](./01-Trebuchet/README.md)
+- [Day 1](./01-Trebuchet)
   - Part 1 solution
   - Part 2 solution
 - Day 1
