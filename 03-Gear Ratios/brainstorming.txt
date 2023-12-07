@@ -1,0 +1,13 @@
+(1)Campo atual é número?
+    S
+        (2)Campo da linha debaixo é símbolo especial?
+            S 
+                Armazenar número;
+                Próximo campo (1)
+            N
+                Próximo campo (2)
+    N
+        Último elemento armazenado é número?
+            S
+                Adicionar espaço
+                Próximo campo (1)
