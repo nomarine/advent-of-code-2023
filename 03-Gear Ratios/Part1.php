@@ -4,7 +4,7 @@
     $schematics = generateSchematic($lines);
     
     /* print_r($schematics); */
-    generateMatrix($schematics, $numerics, $specials);
+    getPartNumbers($schematics);
 
     function generateSchematic($lines){
         return array_map('str_split', $lines);
@@ -18,29 +18,17 @@
         return $matrix;
     }
 
-    function getPartNumbers($matrix){
-        foreach($matrix[0] as $line_position => $line){
+    function getPartNumbers($schematics){
+        $part_numbers = "";
+        foreach($schematics as $line_position => $line){
             foreach($line as $char_position => $char){
-                if($line_position > 0){
-                    for($i = $line_position-1; $i < $line_position+1; $i++){
-                        if($char_position > 0){
-                            for($j = $char_position-1; $j < $char_position+1; $j++){
-                                if($matrix[$line_position-1][$i]);
-                    }
-                }
-            }
-        }}
-        }
-    }
-
-    function checkSurroundings($matrix, $line, $char){
-        if($line === reset($matrix)){
-            for($i = key($line); $i <= key($line)+1; $i++){
-                foreach($line as $key => $value){
-
+                if(is_numeric($char) && (is_special($line[$char_position+1])) ){
+                    $part_numbers .= $char;
                 }
             }
         }
+        print_r($part_numbers);
+        return $part_numbers;
     }
 
     function is_special($char){
